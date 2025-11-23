@@ -37,35 +37,35 @@ class Distance:
             return Distance(round(self.km / other, 2))
         raise TypeError("error")
 
-    def __lt__(self, other: int | float) -> bool:
+    def __lt__(self, other: Distance | int | float) -> bool:
         if isinstance(other, Distance):
             return self.km < other.km
         elif isinstance(other, (int, float)):
             return self.km < other
         raise TypeError("error")
 
-    def __le__(self, other: int | float) -> bool:
+    def __le__(self, other: Distance | int | float) -> bool:
         if isinstance(other, Distance):
             return self.km <= other.km
         elif isinstance(other, (int, float)):
             return self.km <= other
         raise TypeError("error")
 
-    def __eq__(self, other: int | float) -> bool:
+    def __eq__(self, other: Distance | int | float) -> bool:
         if isinstance(other, Distance):
             return self.km == other.km
         elif isinstance(other, (int, float)):
             return self.km == other
         raise TypeError("error")
 
-    def __gt__(self, other: int | float) -> bool:
+    def __gt__(self, other: Distance | int | float) -> bool:
         if isinstance(other, Distance):
             return self.km > other.km
         elif isinstance(other, (int, float)):
             return self.km > other
         raise TypeError("error")
 
-    def __ge__(self, other: int | float) -> bool:
+    def __ge__(self, other: Distance | int | float) -> bool:
         if isinstance(other, Distance):
             return self.km >= other.km
         elif isinstance(other, (int, float)):
